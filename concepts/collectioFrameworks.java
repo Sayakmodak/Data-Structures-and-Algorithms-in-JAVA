@@ -1,5 +1,3 @@
-package concepts;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
@@ -61,9 +59,16 @@ public class collectioFrameworks {
         list.set(0, 100);
         System.out.println(list);
 
+        System.out.println("printing arraylist using forEach loop");
+        for(Integer i: list){
+            System.out.print(i + " ");
+        }
+
         System.out.println(list.get(2));
         System.out.println(list.contains(20));
 
+
+        // convert to array
         Object[] obj = list.toArray();
         System.out.println("Converted to array: ");
         for(int i = 0; i < obj.length; i++) {
@@ -76,6 +81,7 @@ public class collectioFrameworks {
         ArrayList<Integer> cloneList = new ArrayList<>();
         cloneList = (ArrayList<Integer>)list.clone();
         System.out.println(cloneList);
+        
         cloneList.sort(Comparator.naturalOrder());
         System.out.println("After sorting : " + cloneList);
 
